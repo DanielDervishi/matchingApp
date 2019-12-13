@@ -214,7 +214,7 @@ Alerts.showActionAlertWithOkayAndCancel(on: self, with: "Game Over", message: "S
     lblCountDown.text = ""
 
         }
-        //        if gameMode == 2{
+               if gameMode == 2{
                     LblScorePlayer1.text = "\(player1Name) Score: \(scorePlayer1)"
 
 
@@ -225,7 +225,7 @@ Alerts.showActionAlertWithOkayAndCancel(on: self, with: "Game Over", message: "S
                         }else if turn == 1  && gameMode == 2{
                     lblCountDown.text = "\(player2Name)'s turn"
                         }
-        //        }
+                }
 }
 
     @IBAction func giveUpButtonPressed(_ sender: UIButton) {
@@ -255,3 +255,4 @@ Alerts.showActionAlertWithOkayAndCancel(on: self, with: "Game Over", message: "S
 //        self.presentingViewController?.dismiss(animated: false, completion: nil)
     }
 }
+

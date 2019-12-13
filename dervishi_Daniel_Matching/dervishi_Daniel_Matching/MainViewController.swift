@@ -20,7 +20,13 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (sender! as AnyObject).currentTitle == "Button" {
-               } else {
+        } else if (sender! as AnyObject).currentTitle == "LeaderBoard"{
+            
+        }
+        
+        
+        
+        else{
                    let myVC = segue.destination as! ViewController
 
                    myVC.gameMode = gamemode
