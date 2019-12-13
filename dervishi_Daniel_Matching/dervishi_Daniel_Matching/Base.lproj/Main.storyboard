@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lvi-5s-II8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="Agu-eq-Jmf">
+            <objects>
+                <viewController id="Lvi-5s-II8" customClass="MainViewController" customModule="dervishi_Daniel_Matching" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fdi-gr-Lcg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBD-ZL-tps">
+                                <rect key="frame" x="157" y="378" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Single Player"/>
+                                <connections>
+                                    <action selector="singlePlayer:" destination="Lvi-5s-II8" eventType="touchUpInside" id="gX7-TA-TQi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYM-zx-8UO">
+                                <rect key="frame" x="163" y="494" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Time Mode"/>
+                                <connections>
+                                    <action selector="timeMode:" destination="Lvi-5s-II8" eventType="touchUpInside" id="NDw-gF-7LE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqy-uT-vyn">
+                                <rect key="frame" x="174" y="433" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="2 Player"/>
+                                <connections>
+                                    <action selector="Player:" destination="Lvi-5s-II8" eventType="touchUpInside" id="Trb-cg-6q4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsJ-kE-Kix">
+                                <rect key="frame" x="61" y="791" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="helpScreen:" destination="Lvi-5s-II8" eventType="touchUpInside" id="APH-BC-yRz"/>
+                                    <segue destination="mwU-XM-I3h" kind="presentation" modalPresentationStyle="fullScreen" id="IYG-tW-uNS"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgs-CI-dbb">
+                                <rect key="frame" x="61" y="601" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Hd-15-B42">
+                                <rect key="frame" x="228" y="601" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uf9-1G-e5Q"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0WG-tz-qSa"/>
+                    <connections>
+                        <outlet property="player1NameTxt" destination="Vgs-CI-dbb" id="ryI-4D-OrT"/>
+                        <outlet property="player2NameTxt" destination="0Hd-15-B42" id="eyl-oz-nq3"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="mainSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="o6R-dm-7Xn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASk-8J-oGX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="149"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MnP-5X-CaF">
+            <objects>
+                <viewController id="mwU-XM-I3h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qnd-jp-A61">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djx-Y0-URd">
+                                <rect key="frame" x="26" y="50" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="c2C-mu-Cmd" kind="unwind" unwindAction="unwindToVC1WithUnwindSegue:" id="Jil-SS-yqT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKU-32-UIP">
+                                <rect key="frame" x="20" y="248" width="375" height="246"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Normal Mode - Goal: Match all the characters Scoring: The more consecutive guesses you make the most points you will earn Time Attack: Goal: Match all the characters in two minutes or less Scoring: the more time you have left the greater the score. Two Player Mode Goal: Match more than the other player. If one player gets a correct match they get to continue their turn if they guess wrong it switches to the other players turn, Scoring: Same as Normal Mode</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kEw-In-lLr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UL6-BZ-oNn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rVW-6u-g1v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="c2C-mu-Cmd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="844.41964285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="dervishi_Daniel_Matching" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RG-nv-1qC">
+                                <rect key="frame" x="131" y="205" width="74" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOP-QE-cKN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOz-Rn-kdC">
+                                <rect key="frame" x="229" y="204" width="73" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jz8-a8-BUf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExT-5f-shc">
+                                <rect key="frame" x="37" y="278" width="68" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Oz-Og-Dm5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKp-uC-mCM">
+                                <rect key="frame" x="131" y="277" width="73" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SCX-DU-HEc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qP3-4f-lnD">
+                                <rect key="frame" x="227" y="280" width="70" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jn0-vM-kKX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdz-0E-jlQ">
+                                <rect key="frame" x="37" y="371" width="68" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="95S-dH-n0M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-1r-x0p">
+                                <rect key="frame" x="131" y="372" width="73" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PSd-Ie-l9T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH7-dm-tVl">
+                                <rect key="frame" x="227" y="372" width="70" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SZr-JY-f4j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSA-Ap-AfI">
+                                <rect key="frame" x="131" y="446" width="73" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTw-n3-bjz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHT-vb-PRo">
+                                <rect key="frame" x="227" y="447" width="70" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PDt-Es-TyO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bep-VZ-nLl">
+                                <rect key="frame" x="313" y="203" width="72" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lT0-yY-CPr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15O-8U-TQz">
+                                <rect key="frame" x="313" y="282" width="72" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dXX-c5-qpv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRd-3T-RBB">
+                                <rect key="frame" x="313" y="372" width="72" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ljN-HY-Qsf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecb-eh-X5s">
+                                <rect key="frame" x="313" y="447" width="72" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b7p-WI-DCc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7df-2i-R3L">
+                                <rect key="frame" x="37" y="204" width="68" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4j1-5P-Ykb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5G-3h-Wna">
+                                <rect key="frame" x="37" y="447" width="68" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="utton" image="baraam"/>
+                                <connections>
+                                    <action selector="btnCollectionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NsV-Ka-5px"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cD2-vr-byj">
+                                <rect key="frame" x="29" y="548" width="348" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3V-zh-Kbe">
+                                <rect key="frame" x="168" y="433" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Game"/>
+                                <connections>
+                                    <action selector="startGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QI4-vG-U5O"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Left: 60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPa-Hm-FjQ">
+                                <rect key="frame" x="135" y="85" width="137" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuD-ty-Bi5">
+                                <rect key="frame" x="34" y="44" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="eRb-u0-Afw" kind="unwind" unwindAction="unwindToVC1WithUnwindSegue:" id="CN8-K1-kFI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9u-ZQ-Oku">
+                                <rect key="frame" x="29" y="591" width="348" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2I-h1-Akb">
+                                <rect key="frame" x="50" y="741" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Give Up"/>
+                                <connections>
+                                    <action selector="giveUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7W6-jC-sli"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKG-TH-K38">
+                                <rect key="frame" x="40" y="779" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5A-n4-sxZ"/>
+                                    <segue destination="eRb-u0-Afw" kind="unwind" unwindAction="unwindToVC1WithUnwindSegue:" id="qfk-jc-bdx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PeQ-Mm-Iiv"/>
+                    <connections>
+                        <outlet property="LblScorePlayer1" destination="cD2-vr-byj" id="ABa-1R-3ed"/>
+                        <outlet property="LblScorePlayer2" destination="o9u-ZQ-Oku" id="ByP-Bi-nV9"/>
+                        <outlet property="giveUpButton" destination="r2I-h1-Akb" id="mzt-zj-s3A"/>
+                        <outlet property="lblCountDown" destination="bPa-Hm-FjQ" id="cVl-jl-8NI"/>
+                        <outlet property="newGameButton" destination="AKG-TH-K38" id="hFX-dE-Xo1"/>
+                        <outlet property="startGameButton" destination="i3V-zh-Kbe" id="kf8-e8-BJP"/>
+                        <outletCollection property="btnCollection" destination="7df-2i-R3L" collectionClass="NSMutableArray" id="ZAn-Y6-U07"/>
+                        <outletCollection property="btnCollection" destination="7RG-nv-1qC" collectionClass="NSMutableArray" id="PK4-gA-p1N"/>
+                        <outletCollection property="btnCollection" destination="JOz-Rn-kdC" collectionClass="NSMutableArray" id="xFr-1C-kJ8"/>
+                        <outletCollection property="btnCollection" destination="bep-VZ-nLl" collectionClass="NSMutableArray" id="Vxv-LA-H1L"/>
+                        <outletCollection property="btnCollection" destination="ExT-5f-shc" collectionClass="NSMutableArray" id="rdl-I3-BTx"/>
+                        <outletCollection property="btnCollection" destination="DKp-uC-mCM" collectionClass="NSMutableArray" id="2FM-Cg-Kc6"/>
+                        <outletCollection property="btnCollection" destination="qP3-4f-lnD" collectionClass="NSMutableArray" id="6Yq-Jc-AeR"/>
+                        <outletCollection property="btnCollection" destination="15O-8U-TQz" collectionClass="NSMutableArray" id="Cfi-Oe-2RO"/>
+                        <outletCollection property="btnCollection" destination="Gdz-0E-jlQ" collectionClass="NSMutableArray" id="rdl-NE-JPp"/>
+                        <outletCollection property="btnCollection" destination="gPc-1r-x0p" collectionClass="NSMutableArray" id="fLU-W2-eYe"/>
+                        <outletCollection property="btnCollection" destination="dH7-dm-tVl" collectionClass="NSMutableArray" id="b66-Dy-MDt"/>
+                        <outletCollection property="btnCollection" destination="dRd-3T-RBB" collectionClass="NSMutableArray" id="Hbq-bw-ecd"/>
+                        <outletCollection property="btnCollection" destination="z5G-3h-Wna" collectionClass="NSMutableArray" id="fQA-wu-3qH"/>
+                        <outletCollection property="btnCollection" destination="gSA-Ap-AfI" collectionClass="NSMutableArray" id="Eai-pd-Thk"/>
+                        <outletCollection property="btnCollection" destination="QHT-vb-PRo" collectionClass="NSMutableArray" id="Cls-hW-uYT"/>
+                        <outletCollection property="btnCollection" destination="Ecb-eh-X5s" collectionClass="NSMutableArray" id="r4F-c5-ta6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="eRb-u0-Afw" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1149" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="baraam" width="288" height="288"/>
+    </resources>
+</document>
